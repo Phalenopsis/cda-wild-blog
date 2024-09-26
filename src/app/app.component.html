@@ -1,1 +1,24 @@
-<app-article></app-article>
+<section>
+    @for (article of articles; track $index) {
+        @if(article.isPublished) {
+            <article [ngClass]="{'popular-article': article.likes >= 100}">
+                <header>
+                    <h2>{{article.title}}</h2>
+                    <p>By {{article.author}}</p>
+                </header>
+                <p>{{article.content}}</p>
+                <img [src]="article.image">
+                <p>{{article.likes}} ❤️</p>
+                <footer>
+                    <h3>Commentaires</h3>
+                    <p>{{article.comment}}</p>
+                    <label for="comment">Ajoutez votre commentaire</label>
+                </footer>
+                <button (click)="unpublish($index)">Unpublish</button>
+            </article>
+        }
+    }
+    @if (!numberArticlePublished) {
+        <p>Il n'y a aucun article publié</p>
+    }
+</section>
