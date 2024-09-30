@@ -1,5 +1,5 @@
 <section>
-    <!-- @for (article of articles; track $index) {
+
         @if(article.isPublished) {
             <article [ngClass]="{'popular-article': article.likes >= 100}">
                 <header>
@@ -14,13 +14,9 @@
                     <p>{{article.comment}}</p>
                     <label for="comment">Ajoutez votre commentaire</label>
                 </footer>
-                <button (click)="unpublish($index)">Unpublish</button>
+                
             </article>
         }
-    }
-    @if (!numberArticlePublished) {
-        <p>Il n'y a aucun article publié</p>
-    } -->
-       Article id : {{articleId}}
+
 </section>
 <a [routerLink]="['/']">Retour à l'accueil</a>
