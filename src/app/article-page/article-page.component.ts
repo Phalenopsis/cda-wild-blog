@@ -1,11 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { Article } from '../models/article.type';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute, ParamMap, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-article-page',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './article-page.component.html',
   styleUrl: './article-page.component.scss'
 })
