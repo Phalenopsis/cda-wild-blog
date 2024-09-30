@@ -1,0 +1,17 @@
+form {
+    margin: 2rem 20%;
+
+    fieldset {
+        margin: 1rem;
+        padding: 1rem;
+
+        label {
+            padding-right: 1rem;
+        }
+    }
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}

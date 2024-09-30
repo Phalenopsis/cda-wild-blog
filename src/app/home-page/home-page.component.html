@@ -3,5 +3,5 @@
 @for (article of articles; track $index) {
     <li><a [routerLink]="['/article', article.id]">{{article.title}}</a> </li>
 }
-
+    <li><a [routerLink]="['contact']">Formulaire de contact</a></li>
 </ul>
