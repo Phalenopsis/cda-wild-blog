@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { User } from '../models/user.model';
 import { JsonPipe } from '@angular/common';
+import { emailValidator } from '../email-validator';
 
 @Component({
   selector: 'app-user-form',
@@ -15,9 +16,9 @@ export class UserFormComponent {
   user!: User;
 
   userForm = this.formBuilder.group({
-    username: ['', Validators.required, Validators.minLength(4)],
-    email: ['', Validators.required],
-    password: ['', Validators.required],
+    username: ['', [Validators.required, Validators.minLength(4)]],
+    email: ['', [Validators.required, emailValidator]],
+    password: ['', [Validators.required]],
     adress: this.formBuilder.group({
       street: [''],
       zipCode: [''],

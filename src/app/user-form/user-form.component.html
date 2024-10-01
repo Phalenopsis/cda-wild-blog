@@ -1,17 +1,20 @@
-<div class="infos">Note aux correcteurs: la quête ne traite pas de vérification, je n'en ai donc pas fait.</div>
 <form [formGroup]="userForm" class="form" (ngSubmit)="submit()">
     <label>
         Nom d'utilisateur :
         <input type="text" formControlName="username">
-        @if(userForm.controls.username.errors && !userForm.controls.username.pristine) {
-            <span [hidden]="!userForm.controls.username.errors['required']">Le nom d'utilisateur est requis</span>
-            <span [hidden]="!userForm.controls.username.invalid">Le nom d'utilisateur est invalide</span>
-        }
     </label>
+    @if(userForm.controls.username.errors && !userForm.controls.username.pristine) {
+        <span class="error" [hidden]="!userForm.controls.username.errors['required']">Le nom d'utilisateur est requis</span>
+        <span class="error" [hidden]="!userForm.controls.username.invalid">Le nom d'utilisateur est invalide</span>
+    }
     <label>
         Email :
         <input type="text" formControlName="email">
     </label>
+    @if(userForm.controls.email.errors && !userForm.controls.email.pristine) {
+        <span class="error" [hidden]="!userForm.controls.email.errors['required']">L'email est requis</span>
+        <span class="error" [hidden]="!userForm.controls.email.invalid">L'email doit se finir en wilder.school</span>
+    }
     <label>
         Mot de passe :
         <input type="text" formControlName="password">
