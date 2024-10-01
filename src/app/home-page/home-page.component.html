@@ -1,11 +1,8 @@
 <ul>
     <li><a [routerLink]="['/']">Accueil</a></li>
-@for (article of articles; track $index) {
-    <li><a [routerLink]="['/article', article.id]">{{article.title}}</a> </li>
-}
+    <li><a [routerLink]="['catalog']">Catalogue</a></li>
     <li><a [routerLink]="['contact']">Formulaire de contact</a></li>
-    <li></li>
+
     <li><a [routerLink]="['sign-up']">S'inscrire</a></li>
-    <li></li>
-    <li><a [routerLink]="['user-form']">Form user</a><span class="main">Pour la quête 16</span></li>
+    <li><a [routerLink]="['user-form']">Form user</a></li>
 </ul>

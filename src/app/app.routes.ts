@@ -5,10 +5,12 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { FormComponent } from './form/form.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { UserFormComponent } from './user-form/user-form.component';
+import { CatalogComponent } from './catalog/catalog.component';
 
 export const routes: Routes = [
     { path: '', component: HomePageComponent },
     { path: 'article/:id', component: ArticlePageComponent },
+    { path: 'catalog', component: CatalogComponent },
     { path: 'contact', component: FormComponent },
     { path: 'sign-up', component: SignupFormComponent },
     { path: 'user-form', component: UserFormComponent },
