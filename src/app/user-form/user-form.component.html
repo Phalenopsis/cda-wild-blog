@@ -1,0 +1,36 @@
+<div class="infos">Note aux correcteurs: la quête ne traite pas de vérification, je n'en ai donc pas fait.</div>
+<div class="form">
+    <label>
+        Nom d'utilisateur :
+        <input type="text" [formControl]="username">
+    </label>
+    <label>
+        Email :
+        <input type="text" [formControl]="email">
+    </label>
+    <label>
+        Mot de passe :
+        <input type="text" [formControl]="password">
+    </label>
+    <label>
+        Rue :
+        <input type="text" [formControl]="street">
+    </label>
+    <label>
+        Code postal :
+        <input type="text" [formControl]="zipCode">
+    </label>
+    <label>
+        Ville :
+        <input type="text" [formControl]="city">
+    </label>
+    <button (click)="submit()">Inscription</button>
+</div>
+<div>
+    <ul>Results :
+        @if (user) {
+            <li>{{user | json}}</li>
+        }
+        
+    </ul>
+</div>
