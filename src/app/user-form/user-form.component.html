@@ -1,31 +1,35 @@
 <div class="infos">Note aux correcteurs: la quête ne traite pas de vérification, je n'en ai donc pas fait.</div>
-<div class="form">
+<form [formGroup]="userForm" class="form" (ngSubmit)="submit()">
     <label>
         Nom d'utilisateur :
-        <input type="text" [formControl]="username">
+        <input type="text" formControlName="username">
     </label>
     <label>
         Email :
-        <input type="text" [formControl]="email">
+        <input type="text" formControlName="email">
     </label>
     <label>
         Mot de passe :
-        <input type="text" [formControl]="password">
+        <input type="text" formControlName="password">
     </label>
-    <label>
-        Rue :
-        <input type="text" [formControl]="street">
-    </label>
-    <label>
-        Code postal :
-        <input type="text" [formControl]="zipCode">
-    </label>
-    <label>
-        Ville :
-        <input type="text" [formControl]="city">
-    </label>
-    <button (click)="submit()">Inscription</button>
-</div>
+    <div formGroupName="adress">
+        <h3>Adresse :</h3>
+        <label>
+            Rue :
+            <input type="text" formControlName="street">
+        </label>
+        <label>
+            Code postal :
+            <input type="text" formControlName="zipCode">
+        </label>
+        <label>
+            Ville :
+            <input type="text" formControlName="city">
+        </label>
+    </div>
+    
+    <button (click)="submit()" [disabled]="!userForm.valid">Inscription</button>
+</form>
 <div>
     <ul>Results :
         @if (user) {

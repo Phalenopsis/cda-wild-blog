@@ -1,5 +1,6 @@
-export class Adress {
-    constructor(public street: string = "", public zipCode: string = "", public city: string = "") {
+export type Adress = {
+    street: string,
+    zipCode: string,
+    city: string
 
-    }
 }

@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Component, inject } from '@angular/core';
+import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { User } from '../models/user.model';
 import { JsonPipe } from '@angular/common';
 
@@ -11,22 +11,21 @@ import { JsonPipe } from '@angular/common';
   styleUrl: './user-form.component.scss'
 })
 export class UserFormComponent {
+  formBuilder: FormBuilder = inject(FormBuilder);
   user!: User;
 
-  username = new FormControl('');
-  email = new FormControl('');
-  password = new FormControl('');
-  street = new FormControl('');
-  zipCode = new FormControl('');
-  city = new FormControl('');
+  userForm = this.formBuilder.group({
+    username: ['', Validators.required],
+    email: ['', Validators.required],
+    password: ['', Validators.required],
+    adress: this.formBuilder.group({
+      street: [''],
+      zipCode: [''],
+      city: ['']
+    })
+  });
 
   submit() {
-    this.user = new User();
-    this.user.username = this.username.value as string;
-    this.user.email = this.email.value as string;
-    this.user.password = this.password.value as string;
-    this.user.adress.street = this.street.value as string;
-    this.user.adress.zipCode = this.zipCode.value as string;
-    this.user.adress.city = this.city.value as string;
+    this.user = this.userForm.value as User;
   }
 }
