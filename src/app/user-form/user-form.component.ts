@@ -15,7 +15,7 @@ export class UserFormComponent {
   user!: User;
 
   userForm = this.formBuilder.group({
-    username: ['', Validators.required],
+    username: ['', Validators.required, Validators.minLength(4)],
     email: ['', Validators.required],
     password: ['', Validators.required],
     adress: this.formBuilder.group({

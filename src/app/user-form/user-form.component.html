@@ -3,6 +3,10 @@
     <label>
         Nom d'utilisateur :
         <input type="text" formControlName="username">
+        @if(userForm.controls.username.errors && !userForm.controls.username.pristine) {
+            <span [hidden]="!userForm.controls.username.errors['required']">Le nom d'utilisateur est requis</span>
+            <span [hidden]="!userForm.controls.username.invalid">Le nom d'utilisateur est invalide</span>
+        }
     </label>
     <label>
         Email :
