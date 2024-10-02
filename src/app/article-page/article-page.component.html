@@ -1,21 +1,21 @@
-<section>
+
 
         @if(article.isPublished) {
             <article [ngClass]="{'popular-article': article.likes >= 100}">
                 <header>
                     <h2>{{article.title}}</h2>
                     <p>By {{article.author}}</p>
+                    <p>{{article.content}}</p>
                 </header>
-                <p>{{article.content}}</p>
-                <img [src]="article.image">
-                <p>{{article.likes}} ❤️</p>
+                
+                <img [src]="article.image" width="150" height="150">
+                <p class="likes">{{article.likes}} 🤍</p>
+                
                 <footer>
-                    <h3>Commentaires</h3>
-                    <p>{{article.comment}}</p>
-                    <label for="comment">Ajoutez votre commentaire</label>
+                    <button (click)="likeIt()">J'aime</button>
                 </footer>
                 
             </article>
         }
 
-</section>
+

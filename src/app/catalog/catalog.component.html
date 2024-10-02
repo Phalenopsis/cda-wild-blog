@@ -1,3 +1,14 @@
+<section>
 @for (article of articles; track $index) {
-    <app-article-page [article]="article"></app-article-page>
+    <app-article-page 
+    [article]="article"
+    (likeEvent)="handleLike($event)"
+    ></app-article-page>
 }
+</section>
+@if(articlesLiked.length > 0) {
+    @for (article of articlesLiked; track $index) {
+        <app-news [article]="article"></app-news>
+    }
+}
+

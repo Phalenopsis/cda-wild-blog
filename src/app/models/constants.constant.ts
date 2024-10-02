@@ -1,0 +1,1 @@
+export const DELAY_BEFORE_EXPIRED = 9000;

@@ -5,6 +5,5 @@ export type Article = {
     content: string,
     image: string,
     isPublished: boolean,
-    comment: string,
     likes: number
 }

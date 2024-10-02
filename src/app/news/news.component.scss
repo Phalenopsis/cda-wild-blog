@@ -1,0 +1,29 @@
+section.news {
+    position: absolute;
+    z-index: 10;
+    right: 0px;
+    top: -20%;
+    background-color: rgb(236, 181, 240);
+    width: 200px;
+    max-width: 200px;
+    margin: 2rem;
+    animation-duration: 10s;
+    animation-timing-function: ease-in;
+    animation-name: updown;
+    padding: 1rem;
+    border-radius: 20px;
+    border: 3px solid rgb(112, 49, 117);
+
+    @keyframes updown {
+        from {
+            display: block;
+            top: -10%;
+        }
+
+        to {
+            display: block;
+            top: 100%;
+
+        }
+    }
+}

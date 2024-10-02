@@ -3,7 +3,7 @@ section {
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
 
 }
 
@@ -16,6 +16,7 @@ form {
     align-items: center;
     gap: 2rem;
     max-width: 20rem;
+    background-color: pink;
 
     div {
         width: 100%;
@@ -31,9 +32,4 @@ form {
         gap: 2rem;
     }
 
-}
-
-.error {
-    font-weight: bold;
-    color: red;
 }

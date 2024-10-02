@@ -54,9 +54,9 @@
     </fieldset>
   
     <!-- Champ Contenu du message -->
-    <fieldset>
+    <fieldset class="textarea">
       <label for="content">Contenu du message</label>
-      <textarea id="content" name="content" [(ngModel)]="newMessage.content" #content="ngModel" required minlength="5" rows="4" cols="50"></textarea>
+      <textarea id="content" name="content" [(ngModel)]="newMessage.content" #content="ngModel" required minlength="5" rows="4" cols="19"></textarea>
       @if (contactForm.submitted && content.errors) {
         <div>
           @if (content.errors['required']) {
@@ -70,5 +70,5 @@
     </fieldset>
   
     <button type="reset">Restaurer</button>
-    <button type="submit">Sauvegarder</button>
+    <button class="prime" type="submit">Sauvegarder</button>
   </form>

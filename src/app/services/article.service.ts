@@ -11,9 +11,8 @@ export class ArticleService {
       title: 'Angular 16: Les nouveautés',
       author: 'Alice',
       content: 'Les nouveautés d\'Angular 16 incluent...',
-      image: 'https://via.placeholder.com/350x150',
+      image: 'assets/chat01.webp',
       isPublished: true,
-      comment: '',
       likes: 120
     },
     {
@@ -21,9 +20,8 @@ export class ArticleService {
       title: 'Développer une API REST',
       author: 'Bob',
       content: 'Développer une API REST nécessite...',
-      image: 'https://via.placeholder.com/350x150',
+      image: 'assets/chat02.jpg',
       isPublished: true,
-      comment: '',
       likes: 75
     },
     {
@@ -31,9 +29,8 @@ export class ArticleService {
       title: 'Pourquoi TypeScript est essentiel ?',
       author: 'Charlie',
       content: 'TypeScript apporte de la robustesse...',
-      image: 'https://via.placeholder.com/350x150',
+      image: 'assets/chat03.jpg',
       isPublished: true,
-      comment: '',
       likes: 200
     },
     {
@@ -41,9 +38,8 @@ export class ArticleService {
       title: 'Pourquoi manger du chocolat est bon pour la santé ?',
       author: 'Alice',
       content: 'Parce que',
-      image: 'https://via.placeholder.com/350x150',
+      image: 'assets/chat04.jpg',
       isPublished: true,
-      comment: '',
       likes: 120
     },
     {
@@ -51,9 +47,8 @@ export class ArticleService {
       title: 'Développer une API RESTAURATION',
       author: 'Etchebest',
       content: 'Développer une API RESTAURATION nécessite...',
-      image: 'https://via.placeholder.com/350x150',
+      image: 'assets/chat05.jpg',
       isPublished: true,
-      comment: '',
       likes: 75
     },
     {
@@ -61,9 +56,8 @@ export class ArticleService {
       title: 'Suis-je essentiel ?',
       author: 'Pilou',
       content: 'les loutres les gars !',
-      image: 'https://via.placeholder.com/350x150',
+      image: 'assets/chat06.jpg',
       isPublished: true,
-      comment: '',
       likes: 20000
     }
   ];
